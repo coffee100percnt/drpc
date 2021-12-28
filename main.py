@@ -8,7 +8,7 @@ class RPC():
         rpclient = pypresence.Presence(client_id=self.clientid)
         rpclient.connect()
         rpclient.update(buttons=[{"label": "Label", "url": "URL"}], 
-        details="Details")
+                        details="Details")
 
 rpc = RPC("Client ID")
 rpc.up()
