@@ -1,5 +1,6 @@
 import pypresence
 import time
+import config
 
 class RPC():
     def __init__(self, clientid):
@@ -7,10 +8,11 @@ class RPC():
     def up(self):
         rpclient = pypresence.Presence(client_id=self.clientid)
         rpclient.connect()
-        rpclient.update(buttons=[{"label": "Label", "url": "URL"}], 
-                        details="Details")
 
-rpc = RPC("Client ID")
+        rpclient.update(buttons=config.buttons, 
+                        details=config.details) # you can add large_image, large_text
+
+rpc = RPC(config.clientid)
 rpc.up()
 
 while True:
