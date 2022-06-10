@@ -10,8 +10,8 @@ class RPC():
         rpclient.connect()
 
         rpclient.update(buttons=config.buttons, 
-                        details=config.details) # you can add large_image, large_text
-
+                        details=config.details) # you can add large_image, large_text, small_image, small_text; everything is described in config.py file
+        
 rpc = RPC(config.clientid)
 rpc.up()
 
